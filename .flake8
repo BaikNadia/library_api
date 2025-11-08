@@ -1,4 +1,30 @@
 [flake8]
-max-line-length = 119
-ignore = E203, W503
-exclude = .git, __pycache__, venv, .venv
+# Игнорируемые ошибки
+ignore = E203, E501, W503, W504, F401, F841
+
+# Максимальная длина строки
+max-line-length = 120
+
+# Исключаемые директории и файлы
+exclude =
+    .venv,
+    venv,
+    env,
+    .git,
+    __pycache__,
+    migrations,
+    staticfiles,
+    media,
+    .vscode,
+    .idea,
+    *.sqlite3,
+    *.log
+
+# Включаемые файлы
+filename = *.py
+
+# Статистика
+statistics = True
+
+# Показывать источник ошибок
+show-source = True
