@@ -1,26 +1,28 @@
-from django.urls import path, include
+from django.urls import path
 from rest_framework_simplejwt.views import TokenRefreshView
 from . import views
 
 urlpatterns = [
-    # Authentication
-    path('auth/register/', views.register, name='register'),
-    path('auth/login/', views.login, name='login'),
+    # ============ Аутентификация ============
+    path('auth/register/', views.register, name='api_register'),
+    path('auth/login/', views.login, name='api_login'),
+
+    # ✅ Используем стандартный view из SimpleJWT (а не views.token_refresh)
     path('auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
-    # Users
-    path('users/profile/', views.UserProfileView.as_view(), name='user-profile'),
-    path('users/', views.UserListView.as_view(), name='user-list'),
+    # ============ Пользователи ============
+    path('users/profile/', views.UserProfileView.as_view(), name='user_profile'),
+    path('users/', views.UserListView.as_view(), name='user_list'),
 
-    # Authors
-    path('authors/', views.AuthorListView.as_view(), name='author-list'),
-    path('authors/<int:pk>/', views.AuthorDetailView.as_view(), name='author-detail'),
+    # ============ Авторы ============
+    path('authors/', views.AuthorListView.as_view(), name='author_list'),
+    path('authors/<int:pk>/', views.AuthorDetailView.as_view(), name='author_detail'),
 
-    # Books
-    path('books/', views.BookListView.as_view(), name='book-list'),
-    path('books/<int:pk>/', views.BookDetailView.as_view(), name='book-detail'),
+    # ============ Книги ============
+    path('books/', views.BookListView.as_view(), name='book_list'),
+    path('books/<int:pk>/', views.BookDetailView.as_view(), name='book_detail'),
 
-    # Book Loans
-    path('loans/', views.BookLoanListView.as_view(), name='loan-list'),
-    path('loans/<int:pk>/', views.BookLoanDetailView.as_view(), name='loan-detail'),
+    # ============ Займы ============
+    path('loans/', views.BookLoanListView.as_view(), name='loan_list'),
+    path('loans/<int:pk>/', views.BookLoanDetailView.as_view(), name='loan_detail'),
 ]
