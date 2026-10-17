@@ -4,7 +4,6 @@ from pathlib import Path
 from datetime import timedelta
 from decouple import config
 
-
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -134,13 +133,6 @@ AUTH_USER_MODEL = 'core.User'
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-
-# ============ CORS ============
-# Для HTML-шаблонов CORS не так критичен, но оставим для API
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:8000",
-    "http://localhost:8000",
-]
 
 
 # Для разработки - где искать статические файлы

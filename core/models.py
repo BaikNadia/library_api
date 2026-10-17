@@ -34,7 +34,6 @@ class Author(models.Model):
 
 
 class Book(models.Model):
-    objects = None
     GENRE_CHOICES = (
         ('fiction', 'Fiction'),
         ('non-fiction', 'Non-Fiction'),
@@ -68,7 +67,6 @@ class Book(models.Model):
 
 
 class BookLoan(models.Model):
-    objects = None
     STATUS_CHOICES = (
         ('borrowed', 'Borrowed'),
         ('returned', 'Returned'),
