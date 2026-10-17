@@ -9,7 +9,7 @@ from .serializers import (
     UserRegistrationSerializer, UserLoginSerializer, UserSerializer,
     AuthorSerializer, BookSerializer, BookLoanSerializer, BookLoanCreateSerializer
 )
-from .permissions import IsLibrarianOrAdmin, IsOwnerOrLibrarian
+from .permissions import IsLibrarianOrAdmin, IsAdmin, IsOwnerOrLibrarian
 
 
 # Authentication Views
@@ -138,24 +138,3 @@ class BookLoanDetailView(generics.RetrieveUpdateDestroyAPIView):
             book.available_copies += 1
             book.save()
         serializer.save()
-
-from django.shortcuts import render
-
-def register_page(request):
-    """Страница регистрации"""
-    return render(request, 'core/register.html')
-
-
-def login_page(request):
-    """Страница входа"""
-    return render(request, 'core/login.html')
-
-
-def catalog_page(request):
-    """Страница каталога книг"""
-    return render(request, 'core/catalog.html')
-
-
-def blog_page(request):
-    """Страница блога"""
-    return render(request, 'core/blog.html')
