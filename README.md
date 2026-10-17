@@ -15,6 +15,42 @@ Django REST Framework API для управления библиотечной �
 - **Библиотекари** - полное управление книгами, авторами, займами
 - **Администраторы** - полный доступ ко всем функциям
 
+
+# 📚 Library Management System API
+
+[![Python](https://img.shields.io/badge/Python-3.11%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-5.0%2B-green?logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![Django REST](https://img.shields.io/badge/Django%20REST%20Framework-3.15%2B-red?logo=django&logoColor=white)](https://www.django-rest-framework.org/)
+[![JWT](https://img.shields.io/badge/JWT-Auth-orange?logo=jsonwebtokens&logoColor=white)](https://jwt.io/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16%2B-blue?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/Docker-25%2B-blue?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Swagger](https://img.shields.io/badge/Swagger-UI-green?logo=swagger&logoColor=white)](https://swagger.io/)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey?logo=creativecommons&logoColor=white)](https://creativecommons.org/licenses/by/4.0/)
+[![GitHub Stars](https://img.shields.io/github/stars/BaikNadia/library-management-api?style=social)](https://github.com/BaikNadia/library-management-api)
+
+**RESTful API для управления библиотечной системой**  
+Реализовано на Django REST Framework с JWT аутентификацией, ролевой системой и полным CRUD функционалом для книг, авторов, читателей и займов.
+
+
+**👩‍💻 Автор:** [BaikNadia](https://github.com/BaikNadia)  
+**📦 Репозиторий:** [Library Management System API](https://github.com/BaikNadia/library-management-api)  
+**📜 Лицензия:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)
+
+
+## 🚀 Функциональность
+
+### 📚 Управление книгами
+- Полный CRUD для книг
+- Поиск по названию, ISBN, автору
+- Фильтрация по жанру, автору
+- Учет количества экземпляров
+
+### 👥 Пользователи и роли
+- **Читатели** - просмотр книг, управление своими займами
+- **Библиотекари** - полное управление книгами, авторами, займами
+- **Администраторы** - полный доступ ко всем функциям
+
+
 ### 🔐 Аутентификация и авторизация
 - JWT токены для безопасной аутентификации
 - Ролевая система доступа
