@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <div class="decorative-bg">
+        <span class="deco-emoji top-left">📚</span>
+        <span class="deco-emoji bottom-right">📖</span>
+    </div>
+
+    <div class="card-paper auth-card auth-card-small">
+        <div class="card-header">
+            <div class="header-emoji">🔑</div>
+            <h2>Вход в библиотеку</h2>
+            <div class="divider"></div>
+            <p class="subtitle">«Знание — сила»</p>
+        </div>
+
+        <div id="login-error" class="alert alert-error hidden"></div>
+
+        <form id="login-form" class="form">
+            <div class="form-group">
+                <label>ЛОГИН</label>
+                <input type="text" name="username" required
+                       placeholder="Введите имя пользователя" class="input-field">
+            </div>
+            <div class="form-group">
+                <label>ПАРОЛЬ</label>
+                <input type="password" name="password" required
+                       placeholder="Введите пароль" class="input-field">
+            </div>
+
+            <button type="submit" class="btn-primary btn-full" id="submit-btn">
+                ВОЙТИ
+            </button>
+        </form>
+
+        <div class="card-footer">
+            <p>Ещё нет читательского билета?</p>
+            <a href="{% url 'register' %}" class="link-arrow">ЗАРЕГИСТРИРОВАТЬСЯ →</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    initLoginPage();
+</script>
+{% endblock %}
